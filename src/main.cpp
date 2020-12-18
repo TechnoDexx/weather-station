@@ -69,7 +69,7 @@ void printValues()
     // Serial.println(numOfCounting);
     temp_avg = sumTemperature / numOfCounting;
     
-    doc["Temperature"] = round(temp_avg*10)/10;
+    doc["Temperature"] = temp_avg; //round(temp_avg*10)/10;
 
     JsonArray data = doc.createNestedArray("Pressure");
 
@@ -83,7 +83,7 @@ void printValues()
 }
 double roundValue(int value, int roundDigit = 1)
 {
-    return (round(value * pow(10,roundDigit))) / pow(10, roundDigit);
+    return (int(value * pow(10,roundDigit))) / pow(10, roundDigit);
     // return 0;
 }
 void loop()
