@@ -69,7 +69,7 @@ void printValues()
     // Serial.println(numOfCounting);
     temp_avg = sumTemperature / numOfCounting;
     
-    doc["Temperature"] = round(temp_avg*10)/10;
+    doc["Temperature"] = temp_avg; //round(temp_avg*10)/10;
 
     JsonArray data = doc.createNestedArray("Pressure");
 
