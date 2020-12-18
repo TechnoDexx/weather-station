@@ -1,1 +1,0 @@
-Amateur Weaintther Station
