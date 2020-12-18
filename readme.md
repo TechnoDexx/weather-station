@@ -1,1 +1,1 @@
-Amateur Weaintther Station
+Amateur Weather Station
