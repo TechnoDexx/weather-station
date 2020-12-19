@@ -14,10 +14,10 @@
 //Adafruit_BME280 bme; // I2C
 //Adafruit_BME280 bme(BME_CS); // hardware SPI
 Adafruit_BME280 bme(BME_CS, BME_MOSI, BME_MISO, BME_SCK); // software SPI
-double hPa_pressure, mmHg_pressure, temperature, humidity;
+double hPa_pressure{0}, mmHg_pressure{0}, temperature{0}, humidity{0};
 
-static int numOfCounting;
-double sumHpaPressure, sumHgPressure, sumTemperature, sumHumidity, temp_avg;
+static int numOfCounting{0};
+double sumHpaPressure{0}, sumHgPressure{0}, sumTemperature{0}, sumHumidity{0}, temp_avg{0};
 unsigned long delayTime;
 int resetPin=7;
 
