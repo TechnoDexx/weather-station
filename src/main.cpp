@@ -19,7 +19,7 @@ double hPa_pressure{0}, mmHg_pressure{0}, temperature{0}, humidity{0};
 static int numOfCounting{0};
 double sumHpaPressure{0}, sumHgPressure{0}, sumTemperature{0}, sumHumidity{0}, temp_avg{0};
 unsigned long delayTime;
-int resetPin=7;
+int resetPin{7};
 
 double roundValue(int,int);
 
