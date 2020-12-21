@@ -77,7 +77,8 @@ void printValues()
 
     data.add(round(sumHgPressure / numOfCounting));
     doc["Humidity"] = round(sumHumidity / numOfCounting);
-    serializeJsonPretty(doc, Serial);
+    // serializeJsonPretty(doc, Serial);
+    serializeJson(doc, Serial);
     Serial.println();
     Serial.flush();
 }
