@@ -79,7 +79,6 @@ void printValues()
 
 void loop()
 {
-    // Serial.println(roundValue(14.35,1));
     printValues();
     delay(delayTime);
 }
