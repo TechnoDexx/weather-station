@@ -66,27 +66,17 @@ void printValues()
     ++numOfCounting;
     }
 
-    // Serial.println(numOfCounting);
+    
     temp_avg = sumTemperature / numOfCounting;
     
-    doc["Temperature"] = temp_avg; //round(temp_avg*10)/10;
-
-    JsonArray data = doc.createNestedArray("Pressure");
-
-    data.add(round(sumHpaPressure / numOfCounting));
-
-    data.add(round(sumHgPressure / numOfCounting));
+    doc["Temperature"] = temp_avg; 
+    doc["Pressure"] = round(sumHgPressure / numOfCounting);
     doc["Humidity"] = round(sumHumidity / numOfCounting);
-    // serializeJsonPretty(doc, Serial);
     serializeJson(doc, Serial);
     Serial.println();
     Serial.flush();
 }
-double roundValue(int value, int roundDigit = 1)
-{
-    return (int(value * pow(10,roundDigit))) / pow(10, roundDigit);
-    // return 0;
-}
+
 void loop()
 {
     // Serial.println(roundValue(14.35,1));
